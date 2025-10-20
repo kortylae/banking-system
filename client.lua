@@ -7,7 +7,6 @@ Citizen.CreateThread(function()
     end
 end)
 
--- MARKERY I BLIPY
 Citizen.CreateThread(function()
     for _, loc in pairs(Config.Banks) do
         local blip = AddBlipForCoord(loc.x, loc.y, loc.z)
@@ -84,4 +83,5 @@ end)
 RegisterNUICallback('transfer', function(data, cb)
     TriggerServerEvent('kyrelciu_banking:transfer', data.targetAccount, data.amount, data.title)
     cb({ok = true})
+
 end)
