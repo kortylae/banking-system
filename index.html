@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyrelciu Banking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bank-ui" class="bank-container hidden">
+  <div class="bank-card">
+    <header class="card-header">
+      <h1 class="logo">KYRELCIU<span>BANK</span></h1>
+      <button class="btn-close" onclick="closeUI()">×</button>
+    </header>
+
+    <section class="account-info">
+      <h2 id="account-name">Gracz</h2>
+      <p class="info-line">Numer konta: <span id="account-id">AC-0000</span></p>
+      <p class="info-line balance">Saldo: <span id="account-balance">0 $</span></p>
+    </section>
+
+    <section class="actions">
+      <button class="action-btn primary" onclick="toggleDepositForm()">WPŁATA</button>
+      <button class="action-btn primary" onclick="toggleWithdrawForm()">WYPŁATA</button>
+      <button class="action-btn primary" onclick="toggleTransferForm()">PRZELEW</button>
+    </section>
+
+    <section class="transactions">
+      <h3>Historia transakcji</h3>
+      <div id="transactions-list"></div>
+    </section>
+  </div>
+</div>
+<form id="deposit-form" class="transaction-form modal" onsubmit="sendDeposit(event)">
+  <div class="modal-content">
+    <button class="btn-close" type="button" onclick="closeModal('deposit-form')">×</button>
+    <h3>Wpłata $</h3>
+    <p>Wpisz kwotę jaką chcesz wpłacić.</p>
+    <input type="number" id="deposit-amount" placeholder="Kwota wpłaty" required/>
+    <button type="submit" class="action-btn primary">WPŁAĆ</button>
+  </div>
+</form>
+
+<form id="withdraw-form" class="transaction-form modal" onsubmit="sendWithdraw(event)">
+  <div class="modal-content">
+    <button class="btn-close" type="button" onclick="closeModal('withdraw-form')">×</button>
+    <h3>Wypłata $</h3>
+    <p>Wpisz kwotę jaką chcesz wypłacić.</p>
+    <input type="number" id="withdraw-amount" placeholder="Kwota wypłaty" required/>
+    <button type="submit" class="action-btn primary">WYPŁAĆ</button>
+  </div>
+</form>
+
+<form id="transfer-form" class="transaction-form modal" onsubmit="sendTransfer(event)">
+  <div class="modal-content">
+    <button class="btn-close" type="button" onclick="closeModal('transfer-form')">×</button>
+    <h3>Przelew $</h3>
+    <p>Zleć przelew śródków. Uzupełnij niezbędne informacje.</p>
+    <input type="text" id="transfer-to" placeholder="Numer Konta" required/>
+    <input type="text" id="transferTitle" placeholder="Tytuł przelewu" required>
+    <input type="number" id="transfer-amount" placeholder="Kwota" required/>
+    <button type="submit" class="action-btn primary">WYŚLIJ</button>
+  </div>
+</form>
+
+
+<script src="script.js"></script>
+</body>
+</html>
