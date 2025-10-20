@@ -32,11 +32,7 @@ The system allows players to:
 ⚙️ **Easy configuration** via `config.lua`
 🧠 **Full compatibility** with **ESX Legacy framework**
 
-![Bank UI Preview](https://imgur.com/GeTrCqh)
-
-![Bank UI Preview](https://imgur.com/2vPkOf3)
-
-![Bank UI Preview](https://imgur.com/oxIusZ8)
-
-
-![Bank UI Preview](https://imgur.com/YCtngZd)
+![Bank UI 1](https://i.imgur.com/GeTrCqh.png)
+![Bank UI 2](https://i.imgur.com/2vPkOf3.png)
+![Bank UI 3](https://i.imgur.com/oxIusZ8.png)
+![Bank UI 4](https://i.imgur.com/YCtngZd.png)
