@@ -191,15 +191,12 @@ body {
   cursor: pointer;
 }
 
-
-/* Animacja salda */
 @keyframes balancePulse {
   0% { transform: scale(1); text-shadow: 0 0 8px var(--clr-accent); }
   50% { transform: scale(1.05); text-shadow: 0 0 20px var(--clr-accent); }
   100% { transform: scale(1); text-shadow: 0 0 8px var(--clr-accent); }
 }
 
-/* Animacja slide-in dla transakcji */
 @keyframes slideIn {
   0% { opacity: 0; transform: translateY(-20px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -280,3 +277,4 @@ body {
   gap: 12px;
   box-shadow: 0 0 40px #12ff0a2c;
 }
+
